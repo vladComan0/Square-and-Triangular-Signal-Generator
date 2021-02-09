@@ -1,0 +1,29 @@
+Rectangular and Triangular Function Generator  Revised: Thursday, May 21, 2020
+Vlad Coman          Revision: 
+
+
+
+
+
+
+
+Bill Of Materials            May 21,2020      15:58:01	Page1
+
+Item	Quantity	Reference	Part	Value	Tolerance	Description	Manufacturer	Vendor
+______________________________________________
+
+1	1	C	10n	10%	Multilayer Ceramic Capacitors MLCC - SMD/SMT 100V .01uF C0G 1210 10% AEC-Q200	Vishay Intertechnology, Inc.	Mouser.com
+2	2	Dz1,Dz2	BZ-075		Zener Diodes 7.5 Volt 500mW 2%	New Japan Radio Co., Ltd.	Mouser.com
+3	2	D1,D2	D1N1190		Schottky Diodes & Rectifiers 100V 5A	MicroSim Corp.	Mouser.com
+4	1	P21	5k		Potentiometers 5K 12.5MM SQ CONTROL	Bourns, Inc.	Mouser.com
+5	1	P33	10k		Potentiometers 10K LINEAR	Bourns, Inc.	Mouser.com
+6	1	Q1	MPS2716		Bipolar Transistors - BJT 1A 100V 30W NPN	Micro Electronics, Ltd.	Mouser.com
+7	1	Q2	MPS2907		Bipolar Transistors - BJT 1A 100V 30W PNP	Micro Electronics, Ltd.	Mouser.com
+8	1	Rload	25	1%	Metal Film Resistors - Through Hole 3watts 25ohms 1%	Vishay Intertechnology, Inc.	Mouser.com
+9	1	R11	20k	1%	Metal Film Resistors - Through Hole 0207 20Kohms 1% 50ppm CECC 06	Vishay Intertechnology, Inc.	Mouser.com
+10	1	R13	4.7k	1%	Metal Film Resistors - Through Hole 0207 4.7Kohms 1% 50ppm CECC 06	Vishay Intertechnology, Inc.	Mouser.com
+11	1	R22	1.2k	1%	Metal Film Resistors - Through Hole 0218 1.2Kohms 1% 50ppm	Vishay Intertechnology, Inc.	Mouser.com
+12	1	R24	10k	1%	Metal Film Resistors - Through Hole 0149 10Kohms 1% 50ppm	Vishay Intertechnology, Inc.	Mouser.com
+13	2	R31,R32	10k	1%	Metal Film Resistors - Through Hole 0210 10Kohms 1% 50ppm	Vishay Intertechnology, Inc.	Mouser.com
+14	2	R41,R42	1.2k	5%	Metal Film Resistors - Through Hole 1.2K ohm 5% 1W	Bourns, Inc.	Mouser.com
+15	2	U1,U2	TL082			Operational Amplifiers - Op Amps CONDITIONING & INTERFACES	Micro Electronics, Ltd.	Mouser.com

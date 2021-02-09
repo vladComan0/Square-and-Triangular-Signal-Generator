@@ -1,0 +1,300 @@
+
+**** 05/09/20 14:27:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\University Projects\OrCAD Projects\Final-Schmitt-Trigger\schmitt-trigger-pspicefiles\schema
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 SKIPBP 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SCHMITT-TRIGGER
+X_R2         N00405 N03943 N00329 POT PARAMS: SET={SET} VALUE=10k
+R_R3         N00405 0  10k TC=0,0 
+C_C1         N00446 N02065  1n  TC=0,0 
+R_R4         N00546 N00329  27k TC=0,0 
+R_R5         N00546 N02061  5k TC=0,0 
+R_R6         N03943 N00446  15k TC=0,0 
+Q_Q3         N00260 N00260 N00329 BC546A 
+Q_Q4         N00260 N00260 0 BC546A 
+V_V1         +VCC 0 15Vdc
+V_V2         -VCC 0 -15Vdc
+X_R9         N02061 N02061 N02065 POT PARAMS: SET=1 VALUE=5k
+X_U1A         N00546 0 +VCC -VCC N04983 TL082
+X_U1B         0 N00446 +VCC -VCC N02065 TL082
+R_R10         N04983 N00329  2.2k TC=0,0 
+R_R11         N38239 0  25 TC=0,0 
+D_D2         N38315 N38305 D1N1190 
+D_D1         N38243 N38315 D1N1190 
+Q_Q6         N38323 N38305 N38239 MPS2907
+R_R35         N38369 N38243  0.5k TC=0,0 
+Q_Q5         N38369 N38243 N38239 MPS2716
+R_R36         N38305 N38323  0.5k TC=0,0 
+X_U2A         N02065 N38239 -VCC +VCC N38315 TL082
+.PARAM  set=0.5
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 05/09/20 14:27:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\University Projects\OrCAD Projects\Final-Schmitt-Trigger\schmitt-trigger-pspicefiles\schema
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N1190         X_U1A.dx        X_U1A.dy        X_U1B.dx        
+          IS    1.331000E-06  800.000000E-18  800.000000E-18  800.000000E-18 
+           N    2.108                                                        
+         ISR   40.740000E-06                                                 
+         IKF   11.73                                                         
+          BV  400                                                            
+         IBV  100.000000E-06                                                 
+          RS    1.029000E-03                    1.000000E-03                 
+          TT    5.000000E-09                                                 
+         CJO    1.000000E-12                   10.000000E-12                 
+          VJ     .7                                                          
+
+
+               X_U1B.dy        X_U2A.dx        X_U2A.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03                    1.000000E-03 
+         CJO   10.000000E-12                   10.000000E-12 
+
+
+**** 05/09/20 14:27:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\University Projects\OrCAD Projects\Final-Schmitt-Trigger\schmitt-trigger-pspicefiles\schema
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC546A          MPS2907         MPS2716         
+               NPN             PNP             NPN             
+       LEVEL    1               1               1            
+          IS    7.049000E-15    4.661000E-15    6.734000E-15 
+          BF  253             402.8           383.9          
+          NF    1               1               1            
+         VAF  127.9           100              74.03         
+         IKF     .07705          .1132           .06532      
+         ISE   96.260000E-15   14.550000E-15    6.734000E-15 
+          NE    1.556           1.352           1.247        
+          BR    1               3.07             .7482       
+          NR    1               1               1            
+         IKR    3.321                                        
+         ISC  130.800000E-15                                 
+          NC    1.602                                        
+          NK     .5305                                       
+         ISS    0               0               0            
+          RB                   10              10            
+          RE    0               0               0            
+          RC     .8766           .6             1            
+         CJE   11.500000E-12   26.220000E-12    4.493000E-12 
+         VJE     .5              .75             .75         
+         MJE     .6715           .3809           .2593       
+         CJC    5.250000E-12   21.350000E-12    3.118000E-12 
+         VJC     .5697           .75             .75         
+         MJC     .3147           .5234           .3086       
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          TF  409.500000E-12  417.600000E-12  301.500000E-12 
+         XTF   40.12           20               2            
+         VTF   10              12               4            
+         ITF    1.994            .8              .4          
+          TR   10.000000E-09   32.630000E-09  240.300000E-09 
+         XTB    1.5             1.5             1.5          
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.2             2.42         
+           D     .87             .52             .87         
+
+
+**** 05/09/20 14:27:38 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ D:\University Projects\OrCAD Projects\Final-Schmitt-Trigger\schmitt-trigger-pspicefiles\schema
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.jx1       X_U1A.jx2       X_U1B.jx1       X_U1B.jx2       
+               NJF             NJF             NJF             NJF             
+         VTO   -1              -1              -1              -1            
+        BETA  222.070000E-06  222.070000E-06  222.070000E-06  222.070000E-06 
+          IS  100.000000E-12  100.000000E-12  100.000000E-12  100.000000E-12 
+
+
+               X_U2A.jx1       X_U2A.jx2       
+               NJF             NJF             
+         VTO   -1              -1            
+        BETA  222.070000E-06  222.070000E-06 
+          IS  100.000000E-12  100.000000E-12 
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  45.47E-21.
+         Time step =  45.47E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(N00546)                 =   204.54uV  \         0V
+    V(N02061)                 =   102.27uV  \         0V
+    V(+VCC)                   =     15.00V  \         0V
+    V(-VCC)                   =    -15.00V  \         0V
+    V(X_U1A.11)               =     14.56V  \         0V
+    V(X_U1A.12)               =     14.56V  \         0V
+    V(X_U1A.10)               =     7.218V  \         0V
+    V(X_U1A.53)               =     12.68V  \         0V
+    V(X_U1A.54)               =    -12.68V  \         0V
+    V(X_U1A.90)               =    1.168uV  \         0V
+    V(X_U1A.91)               =     40.00V  \         0V
+    V(X_U1A.92)               =    -40.00V  \         0V
+    V(X_U1B.11)               =     14.56V  \         0V
+    V(X_U1B.12)               =     14.56V  \         0V
+    V(X_U1B.10)               =     7.218V  \         0V
+    V(X_U1B.53)               =     12.68V  \         0V
+    V(X_U1B.54)               =    -12.68V  \         0V
+    V(X_U1B.90)               =    4.630uV  \         0V
+    V(X_U1B.91)               =     40.00V  \         0V
+    V(X_U1B.92)               =    -40.00V  \         0V
+    V(X_U2A.11)               =    -15.39V  \         0V
+    V(X_U2A.12)               =    -15.39V  \         0V
+    V(X_U2A.10)               =    -15.56V  \         0V
+    V(X_U2A.53)               =    -17.32V  \         0V
+    V(X_U2A.54)               =     17.32V  \         0V
+    V(X_U2A.90)               =    1.416uV  \         0V
+    V(X_U2A.91)               =     40.00V  \         0V
+    V(X_U2A.92)               =    -40.00V  \         0V
+
+  These supply currents failed to converge:
+
+    I(X_U1A.egnd)             =    5.842uA  \         0A
+    I(X_U1B.egnd)             =    5.839uA  \         0A
+    I(X_U2A.egnd)             =   -12.59uA  \         0A
+    I(V_V1)                   =   -42.68KA  \         0A
+    I(V_V2)                   =    42.68KA  \         0A
+    I(X_U1A.vc)               =    12.68KA  \         0A
+    I(X_U1A.ve)               =    12.68KA  \         0A
+    I(X_U1A.vlim)             =    1.168nA  \         0A
+    I(X_U1A.vlp)              =   -41.24pA  \         0A
+    I(X_U1A.vln)              =   -41.24pA  \         0A
+    I(X_U1B.vb)               =    2.232pA  \         0A
+    I(X_U1B.vc)               =    12.68KA  \         0A
+    I(X_U1B.ve)               =    12.68KA  \         0A
+    I(X_U1B.vlim)             =    4.630nA  \         0A
+    I(X_U1B.vlp)              =   -41.24pA  \         0A
+    I(X_U1B.vln)              =   -41.24pA  \         0A
+    I(X_U2A.vb)               =    1.383pA  \         0A
+    I(X_U2A.vc)               =   -17.32KA  \         0A
+    I(X_U2A.ve)               =   -17.32KA  \         0A
+    I(X_U2A.vlim)             =    1.416nA  \         0A
+    I(X_U2A.vlp)              =   -41.24pA  \         0A
+    I(X_U2A.vln)              =   -41.24pA  \         0A
+
+  These devices failed to converge:
+    D_D2      D_D1      X_U1A.dlp X_U1A.dln X_U1B.dlp X_U1B.dln X_U2A.dlp 
+    X_U2A.dln X_U2A.dp  X_U1A.fb  X_U1B.fb  X_U2A.fb  X_U1A.j1  X_U1A.j2  
+    X_U1B.j1  X_U1B.j2  X_U2A.j1  X_U2A.j2  Q_Q3      Q_Q4      Q_Q6      
+    Q_Q5      
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( +VCC)   15.0000  ( -VCC)  -15.0000  (N00260) 239.7E-18 (N00329) 479.3E-18     
+
+(N00405)-4.456E-12 (N00446)-33.42E-12 (N00546) 204.5E-06 (N02061) 102.3E-06     
+
+(N02065)-33.42E-12 (N03943)-6.684E-12 (N04983) 584.2E-15 (N38239)-490.6E-09     
+
+(N38243)-100.8E-12 (N38305)-100.8E-12 (N38315)-49.33E-12 (N38323)-490.0E-09     
+
+(N38369)-489.6E-09 (X_U1A.6) 58.41E-09                   (X_U1A.7) 58.41E-09    
+
+(X_U1A.8) 58.41E-09                   (X_U1A.9)    0.0000                       
+
+(X_U1B.6) 231.4E-09                   (X_U1B.7) 231.4E-09                       
+
+(X_U1B.8) 231.4E-09                   (X_U1B.9)    0.0000                       
+
+(X_U2A.6) 70.75E-09                   (X_U2A.7) 70.75E-09                       
+
+(X_U2A.8) 70.75E-09                   (X_U2A.9)    0.0000                       
+
+(X_U1A.10)    7.2184                  (X_U1A.11)   14.5600                      
+
+(X_U1A.12)   14.5600                  (X_U1A.53)   12.6840                      
+
+(X_U1A.54)  -12.6840                  (X_U1A.90) 1.168E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  (X_U1B.10)    7.2184                      
+
+(X_U1B.11)   14.5600                  (X_U1B.12)   14.5600                      
+
+(X_U1B.53)   12.6840                  (X_U1B.54)  -12.6840                      
+
+(X_U1B.90) 4.630E-06                  (X_U1B.91)   40.0000                      
+
+(X_U1B.92)  -40.0000                  (X_U1B.99)    0.0000                      
+
+(X_U2A.10)  -15.5570                  (X_U2A.11)  -15.3910                      
+
+(X_U2A.12)  -15.3910                  (X_U2A.53)  -17.3160                      
+
+(X_U2A.54)   17.3160                  (X_U2A.90) 1.416E-06                      
+
+(X_U2A.91)   40.0000                  (X_U2A.92)  -40.0000                      
+
+(X_U2A.99)    0.0000                  
+
+
+**** Interrupt ****

@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-Monte-Carlo"  [ D:\University Projects\OrCAD Projects\Final-Schmitt-Trigger\Schmitt-Trigger-PSpiceFiles\SCHEMATIC1\Monte-Carlo.sim ] 
+
+** Creating circuit file "Monte-Carlo.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3ms 0 SKIPBP 
+.MC 10 TRAN V([OUTS8]) YMAX OUTPUT ALL 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

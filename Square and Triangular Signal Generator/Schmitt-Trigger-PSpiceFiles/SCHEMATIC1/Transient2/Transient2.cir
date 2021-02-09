@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-Transient2"  [ D:\University Projects\OrCAD Projects\Final-Schmitt-Trigger\schmitt-trigger-pspicefiles\schematic1\transient2.sim ] 
+
+** Creating circuit file "Transient2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN 1n 3ms 0 SKIPBP 
+.FOUR 1k 10 V([OUT]) 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
